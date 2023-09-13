@@ -9,12 +9,13 @@ def input_phrase()-> str: return input("Что пропел Винни-Пух?: 
 
 def smash_phrase(phrase: str)-> list: return phrase.split(" ")
 
-def is_it_have_rhythm(phrase_list: list, vowels_list: list)->bool:
+def is_it_have_rhythm(phrase_list: list, vowels_list: list)->str:
     list_1 = [0 for x in range(len(phrase_list))]
     for i in range(len(phrase_list)):
         for x in phrase_list[i]:
             if x in vowels_list:
                 list_1[i] = list_1[i] + 1
+                
     print(list_1)
     for i in range(len(list_1)-1):
         if list_1[i] != list_1[i+1]:
